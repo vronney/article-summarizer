@@ -45,7 +45,7 @@ This repository showcases an Article Summarizer application built to demonstrate
 
 5. **Open in Browser**:  
 ```
-    The application should now be running on `http://localhost:3000/`.
+    The application should now be running on `http://localhost:5173/`.
 ```
 
 ## Features
