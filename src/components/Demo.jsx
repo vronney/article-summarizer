@@ -27,6 +27,13 @@ const Demo = () => {
 
     if (data?.summary) {
       const newArticle = { ...article, summary: data.summary };
+
+      // Check if allArticles already has 5 elements
+      if (allArticles.length >= 5) {
+        // Remove the oldest element (first element in the array)
+        allArticles.shift();
+      }
+
       const updatedAllArticles = [...allArticles, newArticle];
       setArticle(newArticle);
       setAllArticles(updatedAllArticles);
