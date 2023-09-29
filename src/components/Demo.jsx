@@ -39,6 +39,8 @@ const Demo = () => {
       setAllArticles(updatedAllArticles);
 
       localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
+
+      setArticle({ ...newArticle, url: "" });
     }
   };
 
@@ -48,6 +50,16 @@ const Demo = () => {
     setTimeout(() => {
       setCopied("");
     }, 3000);
+  };
+
+  const handleDelete = (e, deleteUrl) => {
+    e.stopPropagation();
+
+    const updatedAllArticles = allArticles.filter(
+      (article) => article.url !== deleteUrl
+    );
+    setAllArticles(updatedAllArticles);
+    localStorage.setItem("articles", JSON.stringify(updatedAllArticles));
   };
 
   return (
@@ -94,6 +106,9 @@ const Demo = () => {
               <p className="flex-1 font-satoshi text-blue-700 font-medium text-sm truncate">
                 {item.url}
               </p>
+              <button onClick={(e) => handleDelete(e, item.url)}>
+                <i className="fa-solid fa-trash"></i>
+              </button>
             </div>
           ))}
         </div>
