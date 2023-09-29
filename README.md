@@ -56,5 +56,5 @@ This repository showcases an Article Summarizer application built to demonstrate
 
 ## Demo
 
-A live demo of the application can be accessed [here](#) (link to be added).
+A live demo of the application can be accessed [here](https://article-summarizer-one.vercel.app/).
 
